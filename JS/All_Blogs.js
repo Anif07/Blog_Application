@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("blog-container");
     container.innerHTML = `
     <div>
-    <img src="./Assets/loading-circles-blue-gradient_78370-2646.jpg" id="loading"/>
+    <div class="spinner"></div>
     </div>`;
 
     fetch("https://json-server-8qp6.onrender.com/posts")

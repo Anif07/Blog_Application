@@ -12,7 +12,24 @@ body {
   height: auto;
   animation: loading 4s linear infinite;
 }
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border: 8px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -37,6 +54,8 @@ body {
   justify-content: center;
 }
 .box-1 {
+  /* background-color: #ffffff; */
+  color: #ffffff;
   width: 550px;
   text-align: justify;
   margin-bottom: 60px;
@@ -62,6 +81,8 @@ body {
   background-color: black;
   font-size: 0.9rem;
   width: 100px;
+  border: none;
+  outline: none;
   height: 35px;
   color: white;
   border-radius: 10px;
@@ -69,6 +90,10 @@ body {
   /* position: absolute; */
   bottom: 20px;
   align-self: end;
+}
+.read-btn:hover {
+  background-color: rgb(224, 77, 244);
+  color: black;
 }
 .deleteBtn {
   background-color: rgb(218, 98, 54);
@@ -78,6 +103,9 @@ body {
   color: white;
   border-radius: 10px;
   cursor: pointer;
+}
+.deleteBtn:hover {
+  background-color: rgb(255, 15, 15);
 }
 img {
   width: 400px;
@@ -185,7 +213,7 @@ img {
   }
   #blog-container {
     padding: 0 4%;
-    grid-template-rows: 550px;
+    grid-template-rows: 320px;
   }
   img {
     width: 350px;
